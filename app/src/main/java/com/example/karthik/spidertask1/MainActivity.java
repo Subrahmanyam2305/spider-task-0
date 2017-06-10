@@ -13,10 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     int a=0;
+    String s = Integer.toString(a);
     public void Click(View view) {             //invoked when the button is pressed
-        display(a++);
+        a++;
+        s = Integer.toString(a);
+        display(s);
     }
-    private void display(int number) {         //the incremented no. displayed using this function
+    private void display(String number) {         //the incremented no. displayed using this function
         TextView quantityTextView = (TextView) findViewById(R.id.content);
         quantityTextView.setText("" + number);
     }
